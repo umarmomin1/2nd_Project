@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{!-- {{>header}} --}}
+    <style> 
+        .temp_form {
+    width: 10%;
+    position: relative;
+    margin: 5rem auto;
+    display: block;
+}
+
+#submitBtn {
+    width: 100%;
+    padding: 3rem 1rem 3rem 1rem;
+    margin: 0rem -3rem -3rem 44rem;
+    background: #1e202b;
+    color: white;
+    border-radius: 2rem;
+    font-size: 1.7rem;
+    background-repeat: 3rem;
+}
+        ::placeholder{
+            columns: #bfc1c8;
+        }
+
+#cityName {
+    position: absolute;
+    margin: 0rem -44rem -3rem;
+    padding right: 16rem 0rem;
+    right: 220px;
+    bottom: -1px;
+    border: none;
+    background: #1e202b;
+    padding: 3rem 50rem 3rem 4rem;
+    border-radius: 2rem;
+    color: white;
+    font-size: 1.6rem;
+}
+
+        .temp_form input[type="submit"]:hover{
+            color: #009ad8;
+            background-color: #fff;
+        }
+
+.tempInfotmation { 
+    position: relative;
+    width: 54rem;
+    margin: 0rem 30rem;
+    min-height: 5rem;
+    background-color: #323544;
+    border-radius: 1rem;
+    font-family: sans-serif;
+}
+
+.top_layer {
+    width: 95%;
+    height: 30%;
+    background-color: #2d303d;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 1rem;
+}
+    .top_layer p{
+        color: #fff;
+        font-weight: 300;
+    }
+
+    .main_layer{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        padding: -2rem;
+    }
+    .main_layer #city_name {
+        padding: 2rem;
+        color: #bfc1c8;
+        font-weight: 300;
+        font-size: 2rem;
+    }
+    .main_layer .middle_layer {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+
+    }
+
+    .main_layer .middle_layer p,
+    .main_layer .middle_layer {
+        font-size: 5rem;
+        font-weight: 900;
+    }
+    .fa{color: #009ad8;}
+    sup{
+        font-size: 6rem;
+        margin-top: 2rem;
+    }
+.main_content{
+    display: inline;
+}
+
+.homeBtn {
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px pink;
+    outline: none;
+    background-color: aquamarine;
+    margin: 1rem 2rem 3rem 45rem;
+}
+
+
+    </style>
+    {{>header}}
+</head>
+
+<body>
+    {{>navbar}}
+    <!-- main header  -->
+    <div class="container-fluid- main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="main_content">
+                    <form class="temp_form">
+                        <input type="text" id="cityName" placeholder="Type your city" autocomplete="off">
+                        <input type="submit" value="search" id="submitBtn">
+                    
+                </div>
+
+                <div class="tempInfotmation">
+                    <div class="top_layer">
+                        <p id="day"> tuseday</p>
+                        <p id="today_data">13 oct</p>
+                    </div>
+                    <div class="main_layer">
+                        <p id="city_name"> output </p>
+                        <div class="middle_layer data_hide">
+                            <p id="temp"> <span id="temp_real_value">0</span><sup>o</sup>C</p>
+                            <p id="temp_status"> <i class="fa fa-cloud"> <area aria-hidden="true" > </i> </p>
+                        </div>
+                    </div>
+                    </form>
+
+              
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <a href="/"><button class="homeBtn" style="color: black;">Back To Home</button></a>
+    
+    
+    <script src="/javascripts/main.js"></script>
+</body>
+
+</html>
